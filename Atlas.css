@@ -1,0 +1,329 @@
+/*.site-header {
+   position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto 10px;
+    padding: 10px 5px;
+    display: inline-block;
+    background-color: rgba(77, 71, 71, 0.425);  
+    border-radius: 30px;
+    width: fit-content;
+    max-width: 50%;
+}   
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;    
+  font-family: 'Montserrat', sans-serif;
+  color: white;        
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);   
+}
+*/
+
+
+
+
+.site-footer {
+    position: fixed;  /* sticks to viewport */
+    bottom: 0;        /* bottom of the screen */
+    left: 0;
+    width: 100%;      /* full width */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* optional: semi-transparent over image */
+    color: white;
+    padding: 20px;
+    z-index: 10;      /* above the image */
+}
+.logo{
+     border: 2px  solid white;
+    border-radius:8px;
+    padding: 2px;
+    display: inline-block;
+     
+    
+    /*shape of logo*/
+    width: 200px;
+    position: relative;
+    z-index:3;
+}
+.header-text{
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+    z-index:3;
+    margin-top: 120px; /* This accounts for the navbar height */
+    font-size: 30px;
+}
+/*
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: wrap;
+    margin-top: 0px;
+    gap:20px;
+    z-index: 2;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 60px;
+    background-color: #000000bd;
+   width: 100px;
+    padding: 10px;
+    text-align: center;
+   border-radius: 20px;
+}
+
+
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* Container */
+body {
+   margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    align-items: center;
+    text-align: center;
+    background-color: #01151d;
+    padding-top: 120px; /* Add padding to account for fixed navbar */
+}
+
+
+
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0);
+   background-color: black;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+/* Navbar menu */
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+nav ul li:hover {
+    background: rgba(8, 59, 117, 0.3);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Underline hover animation */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+/* Social icons + CTA container */
+.nav-extras {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Icons */
+.nav-extras a i {
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-extras a:hover i {
+    color: #00bfff; /* hover color for icons */
+}
+
+
+
+/* CTA Button */
+.cta-btn {
+    background: #203388;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #0099cc;
+}
+
+
+
+@keyframes float {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+
+
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #203388
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 5%;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+}
+.info-box h2 {
+    margin-top: 0;
+    color: #f8f8f8;
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 5%;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;       /* wraps on smaller screens */
+    background: rgba(0,0,0,0.7);  /* semi-transparent black */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    color: white;
+}
+
+.card-image {
+    flex: 1 1 300px;       /* image takes left side */
+    max-width: 400px;
+    object-fit: cover;
+    height: auto;
+}
+
+.card-content {
+    flex: 2 1 400px;       /* content takes right side */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title */
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
